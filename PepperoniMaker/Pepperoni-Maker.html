@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pepperoni Maker 1.0.0</title>
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link id="page_favicon" rel="icon" href="Images/favicon.ico" type="image/x-icon">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body onload="init();">
+	<div id="container">
+		<div id="header">
+			<h1>Pepperoni Maker</h1>
+		</div>
+		<div id="mainDiv">
+			<div id="shop">
+				<p id="titleShop">Pizza Shop</p>
+				<div id="listObj">
+					<div id="obj" onclick="globalControls.clickBuyPizzaiolo();"><img src="Images/Pizzaiolo5050.png" />
+						Pizzaiolo
+						<div id="prix">$ <span id="prixPizzaiolo" /></div>
+					</div>
+					<div id="obj" onclick="globalControls.clickBuyFour();"><img src="Images/Four5050.png" />
+						Four
+						<div id="prix">$ <span id="prixFour" /></div>
+					</div>
+					<div id="obj" onclick="globalControls.clickBuyPizzeria();"><img src="Images/pizzaSell.gif" />
+						Pizzeria
+						<div id="prix">$ <span id="prixPizzeria" /></div>
+					</div>
+					<div id="obj" onclick="globalControls.clickBuyUsine();"><img src="Images/pizzaSell.gif" />
+						Usine
+						<div id="prix">$ <span id="prixUsine" /></div>
+					</div>
+				</div>
+				<div id="sellPizzas">
+					<div id="obj" onclick="globalControls.clickSellPizza();"><img src="Images/pizzaSell.gif" />
+						Pizza
+						<div id="prix"><img src="Images/favicon.ico" /> <span id="prixPizza" /></div>
+					</div>
+					<div id="obj" onclick="globalControls.clickSellPBox();"><img src="Images/pizzaBox.png" />
+						Pizza Boxes
+						<div id="prix"><img src="Images/favicon.ico" /> <span id="prixPbox" /></div>
+					</div>
+					<div id="obj" onclick="globalControls.clickSellCar();"><img src="Images/pizzaSell.gif" />
+						Pizza Car
+						<div id="prix"><img src="Images/favicon.ico" /> <span id="prixCar" /></div>
+					</div>
+					<div id="obj" onclick="globalControls.clickSellTruck();"><img src="Images/pizzaSell.gif" />
+						Pizza Truck
+						<div id="prix"><img src="Images/favicon.ico" /> <span id="prixTruck" /></div>
+					</div>
+				</div>
+				<div id="buttonShop" onclick="globalControls.switchShop();">
+					Sell
+				</div>
+			</div>
+			<div id="center">
+				<div id="pizzaaa">
+					<img src="Images/pizza.svg" onclick="globalControls.clickPizza();" />
+					<p><span id="cptPizza"></span> Pizzas !</p>
+				</div>
+				<div id="stats">
+					<h2>Statistics</h2>
+					<p>Money : <span id="moneyBank"></span> $ (<span id="moneyAddedPs"></span> $/seconds)</p>
+					<p><span id="pizzaAddedPS"></span> Pizzas/seconds</p>
+					<p>Total Pizzas : <span id="pizzaAllTime" /></p>
+				</div>
+				<div id="menu">
+				</div>
+			</div>
+			<div id="items">
+				<div id="listItems">
+					<div id="itemNb"><img src="Images/Pizzaiolo5050.png" />
+						<span id="nbPizzaiolo"></span> Pizzaioli (<span id="pizzaioloPPS"></span> pizzas/seconds)
+					</div>
+					<div id="itemNb"><img src="Images/Four5050.png" />
+						<span id="nbFour"></span> Fours (<span id="fourPPS"></span> pizzas/seconds)
+					</div>
+					<div id="itemNb"><img src="Images/pizzaSell.gif" />
+						<span id="nbPizzeria"></span> Pizzerias (<span id="pizzeriaPPS"></span> pizzas/seconds)
+					</div>
+					<div id="itemNb"><img src="Images/pizzaSell.gif" />
+						<span id="nbUsine"></span> Usines (<span id="usinePPS"></span> pizzas/seconds)
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>version 1.0.0</p>
+		</div>
+	</div>
+</body>
+
+</html>
