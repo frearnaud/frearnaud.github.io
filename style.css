@@ -1,15 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-body {
-    background-color: darkgrey;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --drk-bgd: rgb(49, 49, 49);
+  --drk-color: white;
+  --clr-bgd: darkgrey;
+  --clr-color: rgb(49, 49, 49);
+  --lnk-color: #d4d4e7;
+  --accent: rgb(0, 145, 101);
 }
 
-p {
-    font-size: 240px;
-    text-align: center;
-    vertical-align: middle;
-    text-shadow: 0 0 60px white;
-    color:darkgrey;
+body {
+  margin: 0;
+  background-color: var(--clr-bgd);
+  color: var(--clr-color);
+  font-family: "Roboto", sans-serif;
+}
+
+em {
+  font-size: smaller;
+  font-weight: lighter;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#header,
+footer {
+  flex-shrink: 0;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(50, 50, 50, 0.5);
+  backdrop-filter: blur(0.7rem);
+  color: var(--drk-color);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  background-color: rgb(221, 221, 221);
+  width: clamp(30rem, 60%, 100rem);
+  margin: 3rem;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem rgba(49, 49, 49, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--accent);
+}
+
+.card p {
+  line-height: 1.9rem;
+  color: var(--clr-color);
+}
+
+.card img {
+  float: left;
+  display: block;
+  margin: 0 1.7rem 1rem 0;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: var(--drk-bgd);
+  color: rgb(221, 221, 221);
 }
